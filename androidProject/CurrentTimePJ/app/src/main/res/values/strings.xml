@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">기본화면예제</string>
+    <string name="title_msg">현재시간을 나타내는 화면</string>
+    <string name="current_time">몇시몇분몇초?</string>
+</resources>
