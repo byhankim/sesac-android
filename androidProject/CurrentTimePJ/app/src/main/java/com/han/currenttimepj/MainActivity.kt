@@ -65,9 +65,18 @@ class MainActivity : AppCompatActivity() {
 
         displayTV = TextView(this)
         displayTV.apply {
-            text = "현재 시간은 여기에 보여짐"
+            text = "현재 시간은 여기! 에 보여짐"
             setTextColor(Color.MAGENTA)
             typeface = tFace
+            gravity = Gravity.CENTER
+        }
+
+        // 레거시
+        val legacyBtn = Button(this)
+        with (legacyBtn) {
+            width = LinearLayout.LayoutParams.WRAP_CONTENT
+            height = LinearLayout.LayoutParams.MATCH_PARENT
+            text = resources.getString(R.string.current_time)
             gravity = Gravity.CENTER
         }
 
@@ -75,6 +84,7 @@ class MainActivity : AppCompatActivity() {
             addView(tv)
             addView(currentButton)
             addView(displayTV)
+            addView(legacyBtn)
         }
 
         // MUST: root element (layout을 activity에서 꼭 줘야한다) top-down 방식으로 그린다
