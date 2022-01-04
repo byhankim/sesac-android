@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         } catch (e: NumberFormatException) {
             Toast.makeText(this, resources.getString(R.string.invalid_value), Toast.LENGTH_SHORT).show()
             it.text = null
+            binding.tvAvg.text = resources.getString(R.string.no_result)
             return false
         }
         return true
