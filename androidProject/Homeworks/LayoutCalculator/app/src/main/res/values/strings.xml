@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">LayoutCalculator</string>
+    <string name="usernameLabel">회원이름 또는 별칭</string>
+    <string name="unameHint">이름</string>
+    <string name="emailHint">이메일</string>
+    <string name="emailLabel">이메일</string>
+    <string name="pwLabel">비밀번호</string>
+    <string name="pwHint">4글자이상 입력</string>
+    <string name="pwCheckHint">비밀번호 확인</string>
+    <string name="radioBtnManLabel">남</string>
+    <string name="radioBtnWomanLabel">여</string>
+    <string name="age10">10대</string>
+    <string name="age20">20대</string>
+    <string name="age30">30대</string>
+    <string name="age40">40대</string>
+    <string name="ageEtc">그외</string>
+    <string name="tocLabelText">서평 기본이용약관 보기</string>
+    <string name="acceptTocLabel">기본 약관 동의</string>
+    <string name="signUpBtnLabel">서평회원가입</string>
+    <string name="formTitle">서평회원가입</string>
+    <string name="wrong_input">숫자로 변환할 수 없습니다!</string>
+</resources>

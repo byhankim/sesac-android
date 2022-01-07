@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="etPaddingHorizontal">20dp</dimen>
+    <dimen name="outerHorizontalMargin">16dp</dimen>
+    <dimen name="outerVerticalMargin">10dp</dimen>
+    <dimen name="radioMarginEnd">24dp</dimen>
+    <dimen name="etInnerPaddingHorizontal">8dp</dimen>
+    <dimen name="etInnerPaddingVertical">2dp</dimen>
+    <dimen name="etTextSize">14sp</dimen>
+    <dimen name="tvLabelPaddingHorizontal">4dp</dimen>
+    <dimen name="tvMarginBottom">8dp</dimen>
+    <dimen name="tocLabelTvSize">14sp</dimen>
+    <dimen name="labelTvSize">16sp</dimen>
+    <dimen name="etAdditionalPadding">4dp</dimen>
+    <dimen name="expressionEtMarginBottom">30dp</dimen>
+</resources>

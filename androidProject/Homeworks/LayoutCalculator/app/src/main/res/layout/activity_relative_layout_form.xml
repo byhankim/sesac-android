@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayoutForm">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="@color/formColorPrimary"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:layout_alignParentTop="true"
+        app:theme="@style/FormTheme"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/formTitle"
+            android:textColor="@android:color/white"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/basicFormRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/outerHorizontalMargin"
+        android:layout_marginVertical="@dimen/outerVerticalMargin"
+        android:layout_below="@id/toolbar_top">
+
+        <TextView
+            android:id="@+id/unameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/tvLabelPaddingHorizontal"
+            android:text="@string/usernameLabel"
+            android:textColor="@color/formColorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/labelTvSize"
+            android:layout_marginBottom="@dimen/tvMarginBottom"
+            android:layout_alignParentTop="true"/>
+
+        <EditText
+            android:id="@+id/unameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/unameTv"
+            android:layout_marginBottom="@dimen/tvMarginBottom"
+            android:background="@drawable/et_border_bg"
+            android:hint="@string/unameHint"
+            android:inputType="text"
+            android:paddingVertical="@dimen/etAdditionalPadding"
+            android:textSize="@dimen/etTextSize" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/tvLabelPaddingHorizontal"
+            android:text="@string/emailLabel"
+            android:textSize="@dimen/labelTvSize"
+            android:textColor="@color/formColorPrimary"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/tvMarginBottom"
+            android:layout_below="@id/unameEt"/>
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailTv"
+            android:layout_marginBottom="@dimen/tvMarginBottom"
+            android:background="@drawable/et_border_bg"
+            android:hint="@string/emailHint"
+            android:inputType="textEmailAddress"
+            android:paddingVertical="@dimen/etAdditionalPadding"
+            android:textSize="@dimen/etTextSize" />
+
+        <TextView
+            android:id="@+id/pwTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/tvLabelPaddingHorizontal"
+            android:text="@string/pwLabel"
+            android:textSize="@dimen/labelTvSize"
+            android:textColor="@color/formColorPrimary"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/tvMarginBottom"
+            android:layout_below="@id/emailEt"/>
+
+        <EditText
+            android:id="@+id/pwEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwTv"
+            android:layout_marginBottom="@dimen/tvMarginBottom"
+            android:background="@drawable/et_border_bg"
+            android:hint="@string/pwHint"
+            android:inputType="textPassword"
+            android:paddingVertical="@dimen/etAdditionalPadding"
+            android:textSize="@dimen/etTextSize" />
+
+        <EditText
+            android:id="@+id/pwCheckEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwEt"
+            android:background="@drawable/et_border_bg"
+            android:hint="@string/pwCheckHint"
+            android:inputType="textPassword"
+            android:paddingVertical="@dimen/etAdditionalPadding"
+            android:textSize="@dimen/etTextSize" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/genderRadioGroupRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/outerHorizontalMargin"
+        android:layout_below="@id/basicFormRl">
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:layout_marginStart="@dimen/radioMarginEnd"
+                android:text="@string/radioBtnManLabel"
+                android:textSize="@dimen/labelTvSize"
+                android:textColor="@color/formColorPrimary"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/radioBtnWomanLabel"
+                android:textSize="@dimen/labelTvSize"
+                android:textColor="@color/formColorPrimary"
+                android:textStyle="bold"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ageRadioGroupRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genderRadioGroupRl"
+        android:layout_marginHorizontal="@dimen/outerHorizontalMargin">
+
+
+        <RadioGroup
+            android:id="@+id/ageRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/age10Rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/age10"
+                android:textSize="@dimen/labelTvSize"
+                android:textColor="@color/formColorPrimary"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/age20Rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/age20"
+                android:textSize="@dimen/labelTvSize"
+                android:textColor="@color/formColorPrimary"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/age30Rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/age30"
+                android:textSize="@dimen/labelTvSize"
+                android:textColor="@color/formColorPrimary"
+                android:textStyle="bold"/>
+
+            <RadioButton
+                android:id="@+id/age40Rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/age40"
+                android:textSize="@dimen/labelTvSize"
+                android:textColor="@color/formColorPrimary"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/ageEtcRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/ageEtc"
+                android:textSize="@dimen/labelTvSize"
+                android:textColor="@color/formColorPrimary"
+                android:textStyle="bold"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tocRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/outerHorizontalMargin"
+        android:layout_marginVertical="@dimen/outerVerticalMargin"
+        android:layout_below="@id/ageRadioGroupRl">
+
+        <TextView
+            android:id="@+id/tocLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tocLabelText"
+            android:textSize="@dimen/tocLabelTvSize"
+            android:textColor="@color/formColorPrimary"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/tvMarginBottom" />
+
+        <CheckBox
+            android:id="@+id/tocAcceptCb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acceptTocLabel"
+            android:textColor="@color/formColorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/labelTvSize"
+            android:layout_below="@id/tocLabel"
+            android:layout_marginBottom="@dimen/tvMarginBottom"
+            />
+
+        <Button
+            android:id="@+id/signUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tocAcceptCb"
+            android:layout_marginBottom="@dimen/tvMarginBottom"
+            android:background="@drawable/et_border_bg"
+            android:text="@string/signUpBtnLabel"
+            android:textColor="@color/formColorPrimary"
+            android:textSize="@dimen/labelTvSize"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
