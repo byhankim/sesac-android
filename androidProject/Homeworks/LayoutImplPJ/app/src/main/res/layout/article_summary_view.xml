@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/article_cardview_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/article_summary_cardview"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_width="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/cardview_summ_cate_rl"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/title_rl"
+                android:layout_height="@dimen/article_summary_title_height"
+                android:layout_width="match_parent">
+
+                <ImageView
+                    android:id="@+id/cate_icon_iv"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="@dimen/menu_icon_size"
+                    android:layout_marginStart="@dimen/summ_cate_icon_marginstart"
+                    android:layout_width="@dimen/menu_icon_size"
+                    android:src="@drawable/cateicon_popul" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/title_tv"
+                    android:layout_alignBottom="@id/cate_icon_iv"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/title_tv_marginend"
+                    android:layout_toEndOf="@id/cate_icon_iv"
+                    android:layout_width="match_parent"
+                    android:text="@string/mock_article_title" />
+
+                <ImageView
+                    android:id="@+id/dashed_line"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="@dimen/dotted_line_height"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/summ_cate_icon_marginstart"
+                    android:src="@drawable/dotted_line" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/gender_rl"
+                android:layout_below="@id/title_rl"
+                android:layout_height="34dp"
+                android:layout_width="match_parent">
+
+                <ImageView
+                    android:id="@+id/gender_icon_iv"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="@dimen/menu_icon_size"
+                    android:layout_marginStart="@dimen/summ_cate_icon_marginstart"
+                    android:layout_width="@dimen/menu_icon_size"
+                    android:src="@drawable/gendericon_woman" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/gender_desc_tv"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/title_tv_marginend"
+                    android:layout_toEndOf="@id/gender_icon_iv"
+                    android:layout_width="match_parent"
+                    android:text="@string/mock_article_gender_desc" />
+
+                <ImageView
+                    android:id="@+id/dashed_line2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="@dimen/dotted_line_height"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/summ_cate_icon_marginstart"
+                    android:src="@drawable/dotted_line" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/article_content_tv"
+                android:layout_below="@id/gender_rl"
+                android:layout_height="@dimen/article_content_tv_height"
+                android:layout_marginHorizontal="@dimen/summ_cate_icon_marginstart"
+                android:layout_width="match_parent"
+                android:lineHeight="22dp"
+                android:maxLines="@string/article_content_tv_maxlines"
+                android:paddingHorizontal="@dimen/article_summary_content_padding_horizontal"
+                android:text="@string/mock_article_content"
+                android:textColor="@color/article_content_text_color" />
+
+            <ImageView
+                android:layout_below="@id/article_content_tv"
+                android:layout_height="@dimen/dotted_line_height"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/summ_cate_icon_marginstart"
+                android:src="@drawable/dotted_line" />
+
+            <RelativeLayout
+                android:id="@+id/center_guide_rl"
+                android:layout_below="@id/article_content_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_height="1dp"
+                android:layout_width="1dp" />
+
+            <ImageView
+                android:id="@+id/article_summary_img_left"
+                android:layout_alignEnd="@id/center_guide_rl"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/article_content_tv"
+                android:layout_height="@dimen/article_summary_img_thumbnail_height"
+                android:layout_marginVertical="@dimen/article_img_margin_vertical"
+                android:layout_width="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/unsplash1" />
+
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@id/center_guide_rl"
+                android:layout_alignTop="@id/article_summary_img_left"
+                android:layout_height="@dimen/article_summary_img_thumbnail_height"
+                android:layout_width="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/unsplash2" />
+
+            <ImageView
+                android:id="@+id/dashed_line_img_btm"
+                android:layout_below="@id/article_summary_img_left"
+                android:layout_height="@dimen/dotted_line_height"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/summ_cate_icon_marginstart"
+                android:src="@drawable/dotted_line" />
+
+            <ImageButton
+                android:background="@drawable/reply_x_img"
+                android:id="@+id/article_vote_o"
+                android:layout_below="@id/dashed_line_img_btm"
+                android:layout_height="@dimen/selection_btn_icon_size"
+                android:layout_marginStart="@dimen/selection_btn_margin_horizontal"
+                android:layout_marginVertical="@dimen/vote_btn_margin_vertical"
+                android:layout_width="@dimen/selection_btn_icon_size" />
+
+            <ImageButton
+                android:background="@drawable/reply_o_img"
+                android:id="@+id/article_vote_x"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@id/article_vote_o"
+                android:layout_height="@dimen/selection_btn_icon_size"
+                android:layout_marginEnd="@dimen/selection_btn_margin_horizontal"
+                android:layout_width="@dimen/selection_btn_icon_size" />
+
+            <ImageView
+                android:id="@+id/dashed_line_vote_btm"
+                android:layout_below="@id/article_vote_o"
+                android:layout_height="@dimen/dotted_line_height"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/summ_cate_icon_marginstart"
+                android:src="@drawable/dotted_line" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/comment_encourage_tv"
+                android:layout_below="@id/dashed_line_vote_btm"
+                android:layout_height="@dimen/comment_encourage_tv_height"
+                android:layout_marginHorizontal="@dimen/comment_encourage_tv_margin_horizontal"
+                android:layout_width="match_parent"
+                android:text="@string/comment_encourage_tv_text" />
+
+            <ImageView
+                android:id="@+id/dashed_line_cmnt_encourage_btm"
+                android:layout_below="@id/comment_encourage_tv"
+                android:layout_height="@dimen/dotted_line_height"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/summ_cate_icon_marginstart"
+                android:src="@drawable/dotted_line" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/comment_section_ll"
+                android:layout_alignEnd="@id/center_guide_rl"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/dashed_line_cmnt_encourage_btm"
+                android:layout_height="@dimen/comment_section_ll_height"
+                android:layout_width="0dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:gravity="end"
+                    android:id="@+id/cmt_section_icon_ll"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_width="0dp">
+
+                    <ImageButton
+                        android:background="@drawable/tbicon_comment"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_width="@dimen/menu_icon_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cmt_section_num_ll"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_width="0dp">
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_width="@dimen/menu_icon_size"
+                        android:text="@string/mock_article_cmnt_count" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/like_section_ll"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@id/center_guide_rl"
+                android:layout_below="@id/dashed_line_cmnt_encourage_btm"
+                android:layout_height="@dimen/comment_section_ll_height"
+                android:layout_width="0dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:gravity="end"
+                    android:id="@+id/like_section_icon_ll"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_width="0dp">
+
+                    <ImageButton
+                        android:background="@drawable/like_btn_img"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_width="@dimen/menu_icon_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/like_section_count_ll"
+                    android:layout_gravity="start"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_width="0dp">
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/menu_icon_size"
+                        android:layout_width="@dimen/menu_icon_size"
+                        android:text="@string/mock_article_like_count" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

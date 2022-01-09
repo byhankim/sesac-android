@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LayoutImplPJ</string>
+    <string name="comment_encourage_tv_text">더 좋은 의견있으신 분들은 댓글 부탁드려요</string>
+    <string name="article_content_tv_maxlines">4</string>
+    <string name="mock_article_title">연애질문</string>
+    <string name="mock_article_gender_desc">21세 풋풋한 대학생</string>
+    <string name="mock_article_content">asdfads\nsdj\nfd\nigv\nirjgiorejgdf</string>
+    <string name="mock_article_like_count">8</string>
+    <string name="mock_article_cmnt_count">11</string>
+</resources>

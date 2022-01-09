@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_pad_horizontal">18dp</dimen>
+    <dimen name="toolbar_pad_vertical">14dp</dimen>
+    <dimen name="menu_icon_size">30dp</dimen>
+    <dimen name="icon_hooz_width">100dp</dimen>
+    <dimen name="icon_hooz_height">40dp</dimen>
+    <dimen name="toolbar_pad_end">14dp</dimen>
+    <dimen name="tb_alarm_btn_marginend">14dp</dimen>
+    <dimen name="tb_alarm_btn_martinstart">10dp</dimen>
+    <dimen name="menu_icon_marginstart">18dp</dimen>
+    <dimen name="toobar_pad_bottom">6dp</dimen>
+    <dimen name="subtoolbar_height">56dp</dimen>
+    <dimen name="dotted_line_height">2dp</dimen>
+    <dimen name="subtitle_effect_width">153dp</dimen>
+    <dimen name="subtitle_effect_height">46dp</dimen>
+    <dimen name="subtitle_elevation">16dp</dimen>
+    <dimen name="reply_icon_margin_half">9dp</dimen>
+    <dimen name="summ_cate_icon_marginstart">10dp</dimen>
+    <dimen name="title_tv_marginend">6dp</dimen>
+    <dimen name="article_summary_title_height">34dp</dimen>
+    <dimen name="article_summary_content_padding_horizontal">15dp</dimen>
+    <dimen name="article_content_tv_maxlines">4</dimen>
+    <dimen name="article_content_tv_height">90dp</dimen>
+    <dimen name="article_summary_img_thumbnail_height">90dp</dimen>
+    <dimen name="article_img_margin_vertical">5dp</dimen>
+    <dimen name="selection_btn_margin_horizontal">36dp</dimen>
+    <dimen name="selection_btn_icon_size">80dp</dimen>
+    <dimen name="vote_btn_margin_vertical">10dp</dimen>
+    <dimen name="comment_encourage_tv_margin_horizontal">34dp</dimen>
+    <dimen name="comment_encourage_tv_height">30dp</dimen>
+    <dimen name="comment_section_ll_height">40dp</dimen>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bgr_color"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:minHeight="?android:attr/actionBarSize"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:id="@+id/toolbarInnerRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/toolbar_pad_vertical"
+            android:paddingBottom="@dimen/toobar_pad_bottom">
+
+            <ImageView
+                android:id="@+id/toolbarMenu"
+                android:layout_width="@dimen/menu_icon_size"
+                android:layout_height="@dimen/menu_icon_size"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/menu_icon_marginstart"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_menu" />
+
+            <ImageView
+                android:id="@+id/toolbarLogo"
+                android:layout_width="@dimen/icon_hooz_width"
+                android:layout_height="@dimen/icon_hooz_height"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/title_hooz" />
+
+            <ImageView
+                android:id="@+id/toolbarAlarmBtn"
+                android:layout_width="@dimen/menu_icon_size"
+                android:layout_height="@dimen/menu_icon_size"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/tb_alarm_btn_martinstart"
+                android:layout_marginEnd="@dimen/tb_alarm_btn_marginend"
+                android:src="@drawable/icon_alarm" />
+
+            <ImageView
+                android:id="@+id/toolbarSearchBtn"
+                android:layout_width="@dimen/menu_icon_size"
+                android:layout_height="@dimen/menu_icon_size"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="end"
+                android:layout_toLeftOf="@id/toolbarAlarmBtn"
+                android:src="@drawable/icon_search" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/subtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/subtoolbar_height"
+        android:layout_below="@id/toolbarMain"
+        android:layout_alignParentStart="true"
+        android:background="@color/activity_bgr_color"
+        android:paddingTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:elevation="@dimen/subtitle_elevation">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dotted_line_height"
+                android:paddingHorizontal="@dimen/menu_icon_marginstart"
+                android:src="@drawable/dotted_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/replyManIcon"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/subtitle_effect_width"
+                android:layout_height="@dimen/subtitle_effect_height"
+                android:layout_marginStart="@dimen/menu_icon_marginstart"
+                android:layout_marginEnd="@dimen/reply_icon_margin_half"
+                android:background="@drawable/icon_reply_man"
+                android:scaleType="fitXY"
+                android:stateListAnimator="@null" />
+
+            <ImageButton
+                android:id="@+id/replyWomanIcon"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/subtitle_effect_width"
+                android:layout_height="@dimen/subtitle_effect_height"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/reply_icon_margin_half"
+                android:layout_marginEnd="@dimen/menu_icon_marginstart"
+                android:background="@drawable/icon_reply_woman"
+                android:stateListAnimator="@null" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtoolbar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/article_summary_view" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <include layout="@layout/article_summary_view" />
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
