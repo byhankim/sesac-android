@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/resultTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_result"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/result_tv_size"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        />
+
+    <EditText
+        android:id="@+id/firstValueEt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_standard_height"
+        android:paddingHorizontal="@dimen/widget_et_padding_horizontal"
+        android:layout_marginVertical="8dp"
+        android:gravity="end|center_vertical"
+        android:background="@android:color/darker_gray"
+        tools:text="asdf"
+        android:inputType="number"
+        />
+    <EditText
+        android:id="@+id/secondValueEt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_standard_height"
+        android:paddingHorizontal="@dimen/widget_et_padding_horizontal"
+        android:layout_marginVertical="8dp"
+        android:gravity="end|center_vertical"
+        android:background="@android:color/darker_gray"
+        tools:text="asdf"
+        android:inputType="number"
+        />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="더하기"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/subBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="빼기"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/divBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나누기"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/mulBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="곱하기"
+        android:gravity="center"
+        />
+
+</LinearLayout>
