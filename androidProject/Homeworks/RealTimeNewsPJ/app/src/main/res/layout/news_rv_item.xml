@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/articleRl"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        android:id="@+id/dateTimeTv"
+        tools:text="20220220 일요일 오후 10시 57분"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/paperTv"
+        tools:text="뉴욕타임스"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateTimeTv"
+        android:layout_alignStart="@id/dateTimeTv" />
+
+    <TextView
+        android:id="@+id/tempTv"
+        tools:text=" | "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/paperTv"
+        android:layout_toEndOf="@id/paperTv" />
+
+    <TextView
+        android:id="@+id/sectionTv"
+        tools:text="사회"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/paperTv"
+        android:layout_toEndOf="@id/tempTv" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sectionTv"
+        tools:text="제목"
+        />
+
+    <TextView
+        android:id="@+id/contentTv"
+        tools:text="@string/ipsum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTv"
+        android:ellipsize="end"
+        android:maxLines="5" />
+
+    <TextView
+        android:id="@+id/authorTv"
+        tools:text="@string/author_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contentTv"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/urlTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/authorTv"
+        android:layout_alignParentStart="true"
+        tools:text="@string/url_temp" />
+
+</RelativeLayout>
