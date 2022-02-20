@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="contentTvMaxLines">5</dimen>
+    <dimen name="paper_title_size">24dp</dimen>
+    <dimen name="paper_title_margin_vertical">8dp</dimen>
+    <dimen name="news_item_title_size">16dp</dimen>
+    <dimen name="news_item_margin_vertical">4dp</dimen>
+    <dimen name="news_item_padding">8dp</dimen>
 </resources>

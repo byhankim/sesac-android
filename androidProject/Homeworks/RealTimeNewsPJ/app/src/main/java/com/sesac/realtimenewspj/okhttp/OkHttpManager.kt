@@ -25,12 +25,18 @@ class OkHttpManager {
         /**
          * GET 방식
          */
-        fun getOkHttpUrl(targetURL: String) : HttpUrl {
-            return HttpUrl.Builder()
+        fun getOkHttpUrl(targetURL: String, queryMap: Map<String, String>) : HttpUrl {
+            val url = HttpUrl.Builder()
                 .scheme(PROTOCOL)
                 .host(HOST)
                 .addPathSegments(targetURL)
-                .build()
+            if (queryMap.isNotEmpty()) {
+                queryMap.keys.forEach {
+                    url.addQueryParameter(it, queryMap[it])
+                }
+            }
+
+            return url.build()
         }
     }
 }

@@ -7,23 +7,25 @@
     tools:context=".okhttp.OkHttpRESTActivity">
 
     <TextView
-        android:id="@+id/okhttpTitleTv"
+        android:id="@+id/okHttpTitleTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/okhttp_fragment_title"
+        android:text="@string/sesac_times"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/paper_title_size"
+        android:layout_marginVertical="@dimen/paper_title_margin_vertical"
         />
 
     <FrameLayout
         android:id="@+id/okhttpFragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/okhttpTitleTv"
-        app:layout_constraintStart_toStartOf="@id/okhttpTitleTv"
-        app:layout_constraintEnd_toEndOf="@id/okhttpTitleTv"
+        app:layout_constraintTop_toBottomOf="@id/okHttpTitleTv"
+        app:layout_constraintStart_toStartOf="@id/okHttpTitleTv"
+        app:layout_constraintEnd_toEndOf="@id/okHttpTitleTv"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

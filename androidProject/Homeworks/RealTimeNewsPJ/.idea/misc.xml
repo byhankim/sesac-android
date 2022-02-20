@@ -5,8 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13994565217391305" />
         <entry key="app/src/main/res/layout/activity_ok_http_restactivity.xml" value="0.18819655521783182" />
-        <entry key="app/src/main/res/layout/fragment_ok_http_main.xml" value="0.11666666666666667" />
-        <entry key="app/src/main/res/layout/news_rv_item.xml" value="0.1875" />
+        <entry key="app/src/main/res/layout/fragment_ok_http_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/news_rv_item.xml" value="0.4282655246252677" />
       </map>
     </option>
   </component>

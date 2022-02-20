@@ -5,10 +5,45 @@
     android:layout_height="match_parent"
     tools:context=".okhttp.OkHttpMainFragment">
 
+    <LinearLayout
+        android:id="@+id/queryStringLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/paperEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="@string/paper_hint"/>
+
+        <EditText
+            android:id="@+id/sectionEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:hint="@string/section_hint"
+            />
+
+        <TextView
+            android:id="@+id/searchBtnTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/search_btn_text"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/okhttpFragRV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:layout_below="@id/queryStringLayout"
+        android:layout_marginTop="@dimen/news_item_margin_vertical"
+        android:layout_marginBottom="@dimen/news_item_margin_vertical" />
 
 </RelativeLayout>

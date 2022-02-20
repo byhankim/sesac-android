@@ -22,7 +22,8 @@ import okhttp3.Response
 
 const val TAG = "OkHttpFrag"
 
-class OkHttpMainFragment : BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHttpMainBinding::inflate) {
+class OkHttpMainFragment :
+    BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHttpMainBinding::inflate) {
 
     companion object {
         private val TAG = "FirstFragment"
@@ -53,19 +54,23 @@ class OkHttpMainFragment : BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHtt
     // 여기서 owner.callback(anyString) 쓰면됨미다 ㅇㅇ!
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        with(binding) {
+            selectNews()
+            searchBtnTv.setOnClickListener {
+                /**
+                 * Network
+                 */
+                selectNews()
 
-        Log.e(TAG, "init init")
-
-
-
-
-        /**
-         * Network
-         */
-        selectNews()
-
-
-
+                // ??? clearFocus & remove virtual keyboard ???
+                paperEt.run {
+                    clearFocus()
+                }
+                sectionEt.run {
+                    clearFocus()
+                }
+            }
+        }
     }
 
     private fun selectNews() {
@@ -73,7 +78,16 @@ class OkHttpMainFragment : BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHtt
             val toServer: OkHttpClient
             lateinit var response: Response
             try {
-                val targetURL: HttpUrl = OkHttpManager.getOkHttpUrl(SELECT_NEWS)
+                val queryMap: MutableMap<String, String> = mutableMapOf()
+
+                if (binding.paperEt.text.trim().isNotEmpty()) {
+                    queryMap["paper"] = binding.paperEt.text.trim().toString()
+                }
+                if (binding.sectionEt.text.trim().isNotEmpty()) {
+                    queryMap["section"] = binding.sectionEt.text.trim().toString()
+                }
+                Log.e(TAG, queryMap.toString())
+                val targetURL: HttpUrl = OkHttpManager.getOkHttpUrl(SELECT_NEWS, queryMap)
                 toServer = OkHttpManager.getOkHttpClient()
 
                 val req: Request = Request.Builder()
@@ -82,7 +96,6 @@ class OkHttpMainFragment : BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHtt
 
                 Log.e(TAG, "b4 toServer | target URL: $targetURL")
                 toServer.newCall(req).execute().also { response = it }
-//                Log.e(TAG, "response: ${response.body!!.string()}")
 
                 if (response.isSuccessful) {
                     val gson = Gson()
@@ -98,11 +111,11 @@ class OkHttpMainFragment : BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHtt
 
 //                    newsList = gson.fromJson(response.body!!.string(), mutableListOf<NewsInfo>()::class.java)//NewsModel::class.java)
                     Log.e(TAG, "successful! $newsList")
-//                    val newsList = newsModel.news
 
                     (owner as OkHttpRESTActivity).runOnUiThread {
 //                    activity?.runOnUiThread {
-                        Toast.makeText(binding.root.context, "HTTP 통신 성공!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(binding.root.context, "HTTP 통신 성공!", Toast.LENGTH_SHORT)
+                            .show()
                         /**
                          * RV
                          */
@@ -110,7 +123,7 @@ class OkHttpMainFragment : BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHtt
                             context, LinearLayoutManager.VERTICAL, false
                         ) // context 를 activity에서 받아오는게 맞나...?
 
-                        with (binding.okhttpFragRV) {
+                        with(binding.okhttpFragRV) {
                             layoutManager = manager
                             adapter = OkHttpRecyclerAdapter(newsList, this@OkHttpMainFragment)
                         }
@@ -123,7 +136,7 @@ class OkHttpMainFragment : BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHtt
 //                activity?.runOnUiThread {
                     Toast.makeText(context, "HTTP 문제 발생: $e", Toast.LENGTH_SHORT).show()
                 }
-                Log.e(TAG,  "$e")
+                Log.e(TAG, "$e")
             }
         }.start()
     }

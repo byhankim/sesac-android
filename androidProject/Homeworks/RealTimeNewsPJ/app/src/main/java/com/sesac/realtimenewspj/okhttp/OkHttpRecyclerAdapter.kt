@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.sesac.realtimenewspj.R
 import com.sesac.realtimenewspj.databinding.NewsRvItemBinding
 import com.sesac.realtimenewspj.model.NewsInfo
 
@@ -23,7 +24,6 @@ class OkHttpRecyclerAdapter(
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        Log.e("ADAPTER", newsList[0].datetime_string)
         with (holder.binding) {
             dateTimeTv.text = newsList[position].datetime_string
             paperTv.text = newsList[position].paper.name
@@ -35,6 +35,15 @@ class OkHttpRecyclerAdapter(
 
             root.setOnClickListener {
                 // start anthr frag
+                Log.e("ADAPTER", "boom1")
+                val newFrag = NewsArticleFragment(newsList[position])
+                Log.e("ADAPTER", "boom2")
+                with (owner.fragmentManager?.beginTransaction()) {
+                Log.e("ADAPTER", "boom3")
+                    this?.replace(R.id.okhttpFragmentContainer, newFrag)
+                        ?.addToBackStack(null)
+                        ?.commit()
+                }
             }
         }
     }
