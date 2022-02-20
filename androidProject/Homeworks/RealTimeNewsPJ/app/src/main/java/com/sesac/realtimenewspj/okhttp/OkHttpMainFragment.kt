@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
+import com.google.gson.JsonParser
 import com.sesac.realtimenewspj.BaseFragment
 import com.sesac.realtimenewspj.FragmentCallbackable
 import com.sesac.realtimenewspj.common.SELECT_NEWS
@@ -90,8 +91,12 @@ class OkHttpMainFragment : BaseFragment<FragmentOkHttpMainBinding>(FragmentOkHtt
                      * Expected BEGIN_OBJECT but was BEGIN_ARRAY error if NewsData::class.java is used!!
                      * com.google.gson.internal.LinkedTreeMap cannot be cast to ___ -> class.java??
                      */
+                    newsList = mutableListOf()
+                    JsonParser().parse(response.body!!.string()).asJsonArray.forEach {      // deprecated
+                        newsList.add(gson.fromJson(it, NewsInfo::class.java))
+                    }
 
-                    newsList = gson.fromJson(response.body!!.string(), mutableListOf<NewsInfo>()::class.java)//NewsModel::class.java)
+//                    newsList = gson.fromJson(response.body!!.string(), mutableListOf<NewsInfo>()::class.java)//NewsModel::class.java)
                     Log.e(TAG, "successful! $newsList")
 //                    val newsList = newsModel.news
 
