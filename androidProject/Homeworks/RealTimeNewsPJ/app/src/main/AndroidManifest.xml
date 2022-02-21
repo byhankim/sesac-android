@@ -13,6 +13,9 @@
         android:theme="@style/Theme.RealTimeNewsPJ"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".retrofit_inclass.RetrofitRESTActivity"
+            android:exported="false" />
+        <activity
             android:name=".okhttp.OkHttpRESTActivity"
             android:exported="false" />
         <activity

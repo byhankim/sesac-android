@@ -4,15 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sesac.realtimenewspj.FragmentCallbackable
 import com.sesac.realtimenewspj.R
-import com.sesac.realtimenewspj.databinding.ActivityOkHttpRestactivityBinding
+import com.sesac.realtimenewspj.databinding.ActivityOkHttpRestBinding
 
 class OkHttpRESTActivity : AppCompatActivity(), FragmentCallbackable {
 
-    private lateinit var binding: ActivityOkHttpRestactivityBinding
+    private lateinit var binding: ActivityOkHttpRestBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityOkHttpRestactivityBinding.inflate(layoutInflater).apply {
+        binding = ActivityOkHttpRestBinding.inflate(layoutInflater).apply {
             setContentView(root)
         }
 

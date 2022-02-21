@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.sesac.realtimenewspj.common.commonToast
 import com.sesac.realtimenewspj.databinding.ActivityMainBinding
 import com.sesac.realtimenewspj.okhttp.OkHttpRESTActivity
+import com.sesac.realtimenewspj.retrofit_inclass.RetrofitRESTActivity
 import java.util.*
 
 class MainActivity : ListActivity() {
@@ -20,6 +21,7 @@ class MainActivity : ListActivity() {
         super.onCreate(savedInstanceState)
 //        commonToast("야 여기 메인인데 왜안나오냐")
         addActionMap("1. OkHttp", OkHttpRESTActivity::class.java)
+        addActionMap("2. Retrofit-in class", RetrofitRESTActivity::class.java)
 
         val keys: Set<String> = actions.keys
         val keyNames = keys.toTypedArray()
