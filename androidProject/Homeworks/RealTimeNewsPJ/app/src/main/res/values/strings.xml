@@ -10,4 +10,6 @@
     <string name="paper_hint">신문사 입력</string>
     <string name="section_hint">분야 입력</string>
     <string name="search_btn_text">검색</string>
+    <string name="sesac_times_retrofit">새싹일보_Retrofit</string>
+    <string name="search_token_hint">키워드 입력</string>
 </resources>
